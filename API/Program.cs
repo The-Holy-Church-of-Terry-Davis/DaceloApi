@@ -1,5 +1,8 @@
 using DaceloApi.Handlers;
 
+Console.Write("Please enter the master password > ");
+Globals.MasterPassword = Console.ReadLine() ?? throw new NullReferenceException();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

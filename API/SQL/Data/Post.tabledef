@@ -1,0 +1,11 @@
+[Metadata]
+Table Name = Post
+Namespace = DaceloApi.Types
+Primary Keys = 1
+
+[Columns]
+PostId = UUID
+UserId = UUID
+Time = TIMESTAMP
+Title = VARCHAR
+Content = VARCHAR
