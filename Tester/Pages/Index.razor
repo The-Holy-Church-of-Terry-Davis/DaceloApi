@@ -1,0 +1,54 @@
+﻿@page "/"
+@inject HttpClient cli;
+@using System.Net.Http.Json;
+
+<h1>[string] Enter an API endpoint:</h1>
+<input type="text" @bind="input"></input>
+<button @onclick="async () => await GetAPIStringValue()">Submit</button>
+
+<div>
+    <h1>@output</h1>
+</div>
+
+<button @onclick="async () => await GetHtmlInjector()">Get Page </button>
+
+<div>
+    @injhtml
+</div>
+
+@code
+{
+    public string input = "";
+    public string output = "";
+    public MarkupString injhtml = new MarkupString();
+    
+    public async Task GetAPIStringValue()
+    {
+        Console.WriteLine(input);
+        
+        try
+        {
+            output = await cli.GetStringAsync(input);
+
+        } catch(Exception)
+        {
+            Console.WriteLine("Could not process request!");
+        }
+
+        input = "";
+    }
+
+    public async Task GetHtmlInjector()
+    {   
+        try
+        {
+            //injhtml = await cli.GetStringAsync("http://localhost:5102/api/uptime/gethtml/");
+
+            injhtml = new MarkupString(await cli.GetStringAsync("http://localhost:5102/api/uptime/gethtml/"));
+
+        } catch(Exception)
+        {
+            Console.WriteLine("Could not process request!");
+        }
+    }
+}
