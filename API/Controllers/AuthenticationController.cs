@@ -11,8 +11,9 @@ namespace DaceloApi.Controllers;
 [Route("/api/auth")]
 public class AuthenticationController : ControllerBase
 {
-    [HttpPost]
+    [HttpGet]
     [Route("authenticateuser")]
+    //string urlGetAssignment = $"/api/auth/authenticateuser?json={json}";
     public async Task<Guid?> AuthenticateUser(string json)
     {
         //convert the json from the client into a C# object
