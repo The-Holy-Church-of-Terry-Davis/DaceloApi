@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{56A21F5B-910F-485C-9C75-AD6E49C45A51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{7C0B441D-ADEF-4193-8847-B28447941CBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{56A21F5B-910F-485C-9C75-AD6E49C45A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A21F5B-910F-485C-9C75-AD6E49C45A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A21F5B-910F-485C-9C75-AD6E49C45A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0B441D-ADEF-4193-8847-B28447941CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0B441D-ADEF-4193-8847-B28447941CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0B441D-ADEF-4193-8847-B28447941CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0B441D-ADEF-4193-8847-B28447941CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

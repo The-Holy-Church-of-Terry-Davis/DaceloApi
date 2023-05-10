@@ -1,7 +1,12 @@
 using DaceloApi.Handlers;
+using DaceloApi.SQL;
 
-Console.Write("Please enter the master password > ");
-Globals.MasterPassword = Console.ReadLine() ?? throw new NullReferenceException();
+//CSL dependency injection
+CSL.DependencyInjection.NpgsqlConnectionConstructor = (x) => new Npgsql.NpgsqlConnection(x);
+CSL.DependencyInjection.NpgsqlConnectionStringConstructor = () => new Npgsql.NpgsqlConnectionStringBuilder();
+CSL.DependencyInjection.SslModeConverter = (x) => (Npgsql.SslMode)x;
+
+await SQLHandler.Init();
 
 var builder = WebApplication.CreateBuilder(args);
 
